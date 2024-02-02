@@ -15,6 +15,7 @@ import { Suspense } from 'react';
 import FolderListSkeleton from '@/components/skeleton/folder-list-skeleton';
 import { Note } from '@prisma/client';
 
+
 export default async function ListPage({
     params,
     searchParams,
@@ -34,20 +35,20 @@ export default async function ListPage({
       }
     })
 
-    const tagId = searchParams?.tagId
-    const tag = await db.tag.findFirst({
-      where: {
-        id: tagId
-      },
-      include: {
-        notes: {
-          select: {
-            id: true,
-            title: true
-          }
-        }
-      }
-    })
+    // const tagId = searchParams?.tagId
+    // const tag = await db.tag.findFirst({
+    //   where: {
+    //     id: tagId
+    //   },
+    //   include: {
+    //     notes: {
+    //       select: {
+    //         id: true,
+    //         title: true
+    //       }
+    //     }
+    //   }
+    // })
 
     const CreateNoteFunc = action.CreateNote.bind(null, folderId);
     
@@ -82,7 +83,7 @@ export default async function ListPage({
             </div>
           }
 
-          {
+          {/* {
             searchParams.tagId && tag && tag.userId === session.user.id &&
             <div className='xl:min-h-screen xl:max-h-screen overflow-scroll p-4 min-h-max'>
               <div className='mb-2 flex items-center'>
@@ -109,7 +110,7 @@ export default async function ListPage({
                 }
               </div>   
             </div>
-          }
+          } */}
 
         </div>
       </Suspense>  

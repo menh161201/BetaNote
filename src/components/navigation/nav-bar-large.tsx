@@ -19,7 +19,7 @@ import CreateFolderForm from "../folder/create-folder-form";
 import NoteList from "../note/note-list";
 import TagList from "../tag/tag-list";
 
-
+import Link from "next/link";
 import { FaFolderOpen } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { FaTags } from "react-icons/fa6";
@@ -97,7 +97,7 @@ export default function NavBarLarge({userImg,userId}:NavBarLargeProps) {
                 
                 </AccordionItem>
             </Accordion>
-            
+            <Link href={'/found'}>Test</Link>
             <form action={action.signOut} className="mt-auto">
                 <Button variant='destructive' className="w-full gap-2"><ExitIcon />Sign out</Button>
             </form>
