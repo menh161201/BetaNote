@@ -11,8 +11,11 @@ export default function Home() {
   }
   return (
     <div>
-      <form action={actions.signIn}>
-        <button className='border p-1'>Sign In</button>
+      <form action={actions.signInGithub}>
+        <button className='border p-1'>Sign In Github</button>
+      </form>
+      <form action={actions.signInGoogle}>
+        <button className='border p-1'>Sign In Google</button>
       </form>
     </div>
   );
