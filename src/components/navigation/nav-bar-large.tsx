@@ -97,7 +97,6 @@ export default function NavBarLarge({userImg,userId}:NavBarLargeProps) {
                 
                 </AccordionItem>
             </Accordion>
-            <Link href={'/found'}>Test</Link>
             <form action={action.signOut} className="mt-auto">
                 <Button variant='destructive' className="w-full gap-2"><ExitIcon />Sign out</Button>
             </form>

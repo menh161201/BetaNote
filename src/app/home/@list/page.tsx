@@ -15,7 +15,6 @@ import { Suspense } from 'react';
 import FolderListSkeleton from '@/components/skeleton/folder-list-skeleton';
 import { Note } from '@prisma/client';
 
-
 export default async function ListPage({
     params,
     searchParams,
