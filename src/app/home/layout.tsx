@@ -1,3 +1,5 @@
+import NavBar from "@/components/navigation/nav-bar"
+
 export default function Layout(props: {
     children: React.ReactNode
     list: React.ReactNode
@@ -5,11 +7,8 @@ export default function Layout(props: {
   }) {
     return (
       <div className="flex xl:flex-row flex-col relative">
-        <div className="max-w-max xl:w-[300px] xl:relative absolute">{props.children}</div>
-        <div className="flex-grow flex flex-col xl:grid xl:grid-cols-8">
-          <div className="xl:col-span-2 xl:block hidden">{props.list}</div>
-          <div className="xl:col-span-6">{props.note}</div>
-        </div>
+        <NavBar />
+        <div className="flex-grow">{props.children}</div>
       </div>
     )
   }

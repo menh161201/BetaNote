@@ -4,10 +4,10 @@ export const paths = {
         return '/'
     },
     showFolder(folderId: string) {
-        return `/home?id=${folderId}`
+        return `/home/folders/${folderId}`
     },
     showNote(noteId: string, folderId: string) {
-        return `/home?id=${folderId}&note=${noteId}`
+        return `/home/folders/${folderId}/notes/${noteId}`
     },
     showTag(tagId: string) {
         return `/home?tagId=${tagId}`
@@ -16,3 +16,11 @@ export const paths = {
         return `/home?tagId=${tagId}&note=${noteId}`
     }
 }
+
+// showFolder(folderId: string) {
+//     return `/home?id=${folderId}`
+// }
+
+// showNote(noteId: string, folderId: string) {
+//     return `/home?id=${folderId}&note=${noteId}`
+// }

@@ -9,7 +9,6 @@ interface FolderListProps {
 
 export default async function FolderList({fetchData}:FolderListProps) {
     const folders = await fetchData();
-    
     return (
             <div className="flex flex-col">
                 {

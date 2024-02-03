@@ -64,7 +64,6 @@ export default function NavBarLarge({userImg,userId}:NavBarLargeProps) {
                     <AccordionContent>
                         <CreateFolderForm />
                         <FolderList 
-                         
                         fetchData={() => fetchFolderByUserId(userId)}/>
                     </AccordionContent>
                 
