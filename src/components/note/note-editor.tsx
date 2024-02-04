@@ -36,11 +36,11 @@ export default async function NoteEditor({noteId}:NoteEditorProps) {
     if (!note) {
         return null
     }
-    const tags = await db.tag.findMany({
-        where: {
-            userId: session.user.id
-        }
-    })
+    // const tags = await db.tag.findMany({
+    //     where: {
+    //         userId: session.user.id
+    //     }
+    // })
     
     
     return (
@@ -50,16 +50,16 @@ export default async function NoteEditor({noteId}:NoteEditorProps) {
                     <h1 className="font-bold text-2xl">{note.title}</h1>
                     <div className="flex gap-2 items-center text-sm">
                         <CiShoppingTag className="scale-x-[-1]"/>
-                        {note.tags.map((tag,index) => (
+                        {/* {note.tags.map((tag,index) => (
                             <div key={index} className="border max-w-max p-[.15rem] rounded-md shadow-md">
                                 {tag.name}
                             </div>
-                        ))}
+                        ))} */}
                     </div>
                 </div>
                 
                 {/* <CreateTagForm noteId={noteId} tags={tags}/> */}
-                <EditNoteForm noteId={noteId} state={note.isFavorited} tags={tags} noteTitle={note.title}/>
+                {/* <EditNoteForm noteId={noteId} state={note.isFavorited} tags={tags} noteTitle={note.title}/> */}
             </div>
             <div className="overflow-scroll">
                 <Tiptap note={note} />

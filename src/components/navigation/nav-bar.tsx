@@ -13,7 +13,7 @@ export default async function NavBar() {
 
     
     return (
-        <div>
+        <div className="absolute xl:relative">
             <div className="xl:hidden pl-4 pt-4">
                 <NavBarSmall userImg={session.user.image || ''} userId={session.user.id}/>
             </div>

@@ -14,9 +14,7 @@ export default async function HomePage() {
 
     return (
         <div className="flex flex-col">
-            <ScrollArea>
-                <NavBar />
-            </ScrollArea>
+            WELCOME TO NOTE
             
         </div>
         
