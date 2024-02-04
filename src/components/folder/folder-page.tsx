@@ -10,14 +10,11 @@ import { CiFolderOn } from "react-icons/ci";
 import { PlusCircledIcon } from "@radix-ui/react-icons";
 
 interface FolderPageProps {
-    params: {
-        folderId: string
-    }
+    folderId: string
 }
 
 
-export default async function FolderPage({params}:FolderPageProps) {
-    const {folderId} = params;
+export default async function FolderPage({folderId}:FolderPageProps) {
     
     const folder = await db.folder.findFirst({
         where: {
@@ -29,7 +26,7 @@ export default async function FolderPage({params}:FolderPageProps) {
     }
     const CreateNoteFunc = action.CreateNote.bind(null, folderId);
     return (
-        <div className='xl:min-h-screen xl:max-h-screen overflow-scroll p-4 min-h-max w-[300px] border-r'>
+        <div className='xl:min-h-screen xl:max-h-screen overflow-scroll p-4 min-h-max  xl:w-[300px] xl:border-r'>
             <div className='mb-2 flex items-center'>
                 <div>
                     <h1 className='font-bold text-3xl flex items-center gap-2'><CiFolderOn />{folder.title}</h1>

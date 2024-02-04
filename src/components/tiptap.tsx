@@ -227,7 +227,7 @@ export default function Tiptap({note}:TiptapProps) {
                 </Button>
             </CollapsibleTrigger>
             <CollapsibleContent className=" relative border rounded-lg shadow-sm py-2">
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap justify-center gap-2">
                     <div className="flex gap-2 px-1">
                         <button 
                         onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} className={toggleHeading('heading',1)}><LuHeading1/></button>

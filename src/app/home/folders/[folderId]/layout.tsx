@@ -9,9 +9,12 @@ interface LayoutProps {
 
 export default function Layout({children,params}:LayoutProps) {
     return (
-      <div className="flex">
+      <div className="flex flex-col xl:flex-row">
         
-        <FolderPage params={params}/>
+        <div className=" xl:block">
+          <FolderPage folderId={params.folderId}/>
+        </div>
+        
         
         <div className='flex-grow'>
             {children}
