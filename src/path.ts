@@ -10,10 +10,10 @@ export const paths = {
         return `/home/folders/${folderId}/notes/${noteId}`
     },
     showTag(tagId: string) {
-        return `/home?tagId=${tagId}`
+        return `/home/tags/${tagId}`
     },
     showNoteTag(tagId: string, noteId: string) {
-        return `/home?tagId=${tagId}&note=${noteId}`
+        return `/home/tags/${tagId}/notes/${noteId}`
     }
 }
 
