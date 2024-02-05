@@ -6,14 +6,6 @@ import {
     PopoverTrigger,
 } from "@/components/ui/popover"
 
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog";
 
 import * as actions from '@/actions';
 
@@ -34,7 +26,6 @@ interface EditFolderFormProps {
 }
 
 export default function EditNoteForm({noteId,state,tags,noteTitle}:EditFolderFormProps) {
-    const [formState, action] = useFormState(actions.renameNote.bind(null,noteId), {error: {}})
 
     const deleteNoteFunc = actions.deleteNote.bind(null, noteId);
     const starNoteFunc = actions.starNote.bind(null, noteId);
@@ -49,25 +40,7 @@ export default function EditNoteForm({noteId,state,tags,noteTitle}:EditFolderFor
             </PopoverTrigger>
             <PopoverContent className="max-w-max mt-4" side="left">
                 <div className="flex gap-2 flex-col">
-                    <Dialog>
-                        <DialogTrigger asChild><Button variant='outline' className="gap-2 shadow-md"><Pencil2Icon/>Rename</Button></DialogTrigger>
-                        <DialogContent className="w-[50vw]">
-                            <DialogHeader>
-                                <DialogTitle>Rename</DialogTitle>
-                                <DialogDescription>Rename this note</DialogDescription>
-                                <form action={action} className="flex flex-col gap-2">
-                                    <Input placeholder="Title" name="title" defaultValue={noteTitle}/>
-                                    {
-                                        formState?.error.title ? <div>Title must contain at least 1 character(s)</div> : null
-                                    }
-                                    {
-                                        formState?.error._form ? <div>{formState.error._form}</div> : null
-                                    }
-                                    <Button type="submit">Submit</Button>
-                                </form>
-                            </DialogHeader>
-                        </DialogContent>
-                    </Dialog>
+                    
                     <CreateTagForm noteId={noteId} tags={tags}/>
                     <form action={starNoteFunc}>
                         <Button variant='ghost' className="border shadow-md w-full" onClick={toggleStar}>

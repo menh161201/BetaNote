@@ -24,7 +24,7 @@ import { FaStar } from "react-icons/fa";
 import { Button } from "../ui/button";
 import * as action from '@/actions';
 import { HamburgerMenuIcon,ExitIcon } from "@radix-ui/react-icons";
-import FolderList from "../folder/folder-list";
+import FolderList from "../folder/folder-list-small";
 import CreateFolderForm from "../folder/create-folder-form";
 import NoteList from "../note/note-list";
 import User from "../user/user";
