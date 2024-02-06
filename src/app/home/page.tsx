@@ -1,9 +1,7 @@
-// 'use client';
 
-import NavBar from '@/components/navigation/nav-bar';
 import {auth} from '@/auth';
 import { redirect } from "next/navigation";
-import { ScrollArea } from "@/components/ui/scroll-area";
+
 
 
 export default async function HomePage() {
@@ -13,9 +11,11 @@ export default async function HomePage() {
     }
 
     return (
-        <div className="flex flex-col">
-            WELCOME TO NOTE
-            
+        <div className="flex flex-col min-h-screen justify-center items-center">
+            <div className='font-light text-3xl'>
+                Welcome to Note
+            </div>
+            <img src="/note-placeholder.png" alt="" />  
         </div>
         
     )
