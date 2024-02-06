@@ -12,7 +12,7 @@ export default async function User() {
 
     return (
         <div className="flex flex-col gap-2">
-            <div className="font-extrabold text-xl">LOGO</div>
+            <div className="font-extrabold text-md"><img src="/NOTE.svg" alt="" /></div>
             <div className="flex gap-2">
                 <Avatar >
                     <AvatarImage src={session.user.image || ''}/>
