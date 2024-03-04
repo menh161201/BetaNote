@@ -94,7 +94,7 @@ ul[data-type="taskList"] > li {
   accent-color: black;
 }
 
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
